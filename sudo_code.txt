@@ -1,0 +1,9 @@
+
+START
+- set the time of alarm to go off 
+1a. set make sure alarm would go off
+2a. set alarm clock set time am or pm 
+2 check if alarm is equal to time
+  2a if yes 
+  2aa alarm will go off 
+  2aaa if snoozed then alarm will go  of after 5 miunutes will the alarm will go off  
