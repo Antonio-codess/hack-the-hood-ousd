@@ -1,0 +1,54 @@
+class Hero:
+    def __init__(self, name, starting_health=100):
+	  
+        self.name = name
+        self.starting_health = starting_healt # 100 
+        self.current_health = starting_health # 100
+
+if __name__ == "__hulk__":
+    my_hero = Hero("hulk", 500)
+    print(my_hero.name)            # hulk
+    print(my_hero.current_health)  # for 500
+   def __init__(self, name, starting_health=100):
+	  
+        self.name = name
+        self.starting_health = starting_healt # 100 
+        self.current_health = starting_health # 100
+
+if __name__ == "__grace hopper__":
+    my_hero = Hero("grace hopper", 100)
+    print(my_hero.name)            # grace hopper
+    print(my_hero.current_health)  # for 100
+
+
+from hero import Hero
+from ability import Ability
+from armor import Armor
+
+def main():
+    # Create some abilities
+    fireball = Ability("Fireball", 50)
+    lightning_strike = Ability("Lightning Strike", 70)
+
+    # Create some armors
+    shield = Armor("Shield", 30)
+    armor_plate = Armor("Armor Plate", 40)
+
+    # Create heroes
+    hero1 = Hero("Grace Hopper", 200)
+    hero2 = Hero("Alan Turing", 150)
+
+    # Add abilities to heroes
+    hero1.add_ability(fireball)
+    hero1.add_ability(lightning_strike)
+    
+    hero2.add_ability(fireball)
+
+    # Add armor to heroes
+    hero1.add_armor(shield)
+    hero2.add_armor(armor_plate)
+
+    # Print initial stats
+    print(f"{hero1.name} Health: {hero1.current_health}")
+    print(f"{hero2.name} Health: {hero2.current_health}")
+
