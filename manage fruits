@@ -1,0 +1,43 @@
+
+linux@thinky:~/$ cd commands
+linux@thinky:~/hth/hustle-ousd/commands$ touch fruits.txt animals.txt
+linux@thinky:~/hth/hustle-ousd/commands$ echo "mangoes\nloquat\njackfruit\noranges\ntomatoes\npineapple" >> fruits.txt
+linux@thinky:~/hth/hustle-ousd/commands$ cat fruits.txt
+mangoes
+loquat
+jackfruit
+oranges
+tomatoes
+pineapple
+
+linux@thinky:~/hth/hustle-ousd/commands$ echo -e "zebra\nbunny\nallosaurus\nbear" >> animals.txt
+linux@thinky:~/hth/hustle-ousd/commands$ cat animals.txt
+zebra
+bunny
+allosaurus
+bear
+
+linux@thinky:~/hth/hustle-ousd/commands$ echo -e "ferret" >> animals.txt
+linux@thinky:~/hth/hustle-ousd/commands$ cat animals.txt
+zebra
+bunny
+allosaurus
+bear
+ferret
+
+linux@thinky:~/hth/hustle-ousd/commands$ cd ..
+linux@thinky:~/hth/hustle-ousd$ cd commands
+linux@thinky:~/hth/hustle-ousd/commands$ mv animals.txt fruits.txt ~/lab7
+mv: target ‘/home/linux/lab7/’ is not a directory
+linux@thinky:~/hth/hustle-ousd/commands$ mv animals.txt fruits.txt ~/hth/hustle-ousd/lab7
+linux@thinky:~/hth/hustle-ousd/commands$ cd ~/hth/hustle-ousd/lab7
+linux@thinky:~/hth/hustle-ousd/lab7$ ls
+lab7.txt
+linux@thinky:~/hth/hustle-ousd/lab7$ grep -i "mangoes"
+^C
+linux@thinky:~/hth/hustle-ousd/lab7$ grep -i "mangoes" fruits.txt
+mangoes
+linux@thinky:~/hth/hustle-ousd/lab7$ rm animals.txt
+linux@thinky:~/hth/hustle-ousd/lab7$ ls
+lab7.txt
+fruits.txt  lab7.txt
