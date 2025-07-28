@@ -1,0 +1,50 @@
+import random
+
+def generate_random_number():
+    return random.randint(1, 100)
+
+def get_user_guess():
+    while True:
+        try:
+            num_guess = int(input("Enter your guess (1-100): "))
+            if 1 <= num_guess <= 100:
+                return num_guess
+            else:
+                print("Not in range of 100, try again")
+        except ValueError:
+            print("Invalid input, please enter a number")
+
+def play_guessing_game():
+    secret_number = int(generate_random_number())
+    # Remove this line below in the final version to avoid showing the answer
+    print(f"[DEBUG] Secret number is: {secret_number}")
+    
+    guess_check = False
+    Tries = 0
+
+    while not guess_check:
+        guess_of_user = int(get_user_guess())
+        if guess_of_user == secret_number:
+            guess_check = True
+            Tries += 1
+            print(f"That's right, the number was {secret_number}. It took you {Tries} tries.")
+        else:
+            print("Not right, keep trying")
+            Tries += 1
+
+def game_loop():
+    while True:
+        play_guessing_game()
+        again = input("Play again? (y/n): ").lower()
+        if again != 'y':
+            print("Thanks for playing!")
+            break
+
+# Start the game
+game_loop()
+How to use it:
+Save this as a .py file (like guess_game.py).
+
+Run it in your terminal or Python IDE.
+
+Try guessing numbers between 1 and 100!
